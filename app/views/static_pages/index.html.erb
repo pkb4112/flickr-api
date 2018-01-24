@@ -1,0 +1,14 @@
+
+<%=form_tag do %>
+<%= label_tag :flickr_id, "Flickr ID: " %>
+<%= text_field_tag :flickr_id %>
+<%= submit_tag "Submit"%>
+<%end%>
+
+<% if @photos %>
+  <% @photos.each do |photo_url| %>
+    <p>
+    <%= image_tag photo_url %>
+    </p>
+  <%end%>
+<%end%>
